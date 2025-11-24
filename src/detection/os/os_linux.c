@@ -340,6 +340,20 @@ static void detectOS(FFOSResult* os)
     return;
     #endif
 
+    // Check for GuideOS version file first
+    FF_STRBUF_AUTO_DESTROY guideos = ffStrbufCreate();
+    if (ffAppendFileBuffer(FASTFETCH_TARGET_DIR_ETC "/guideos-version", &guideos))
+    {
+        ffStrbufTrimRightSpace(&guideos);
+        if (guideos.length > 0)
+        {
+            ffStrbufSet(&os->name, &guideos);
+            ffStrbufSet(&os->prettyName, &guideos);
+            ffStrbufSetStatic(&os->id, "guideos");
+            return;
+        }
+    }
+
     if (detectBedrock(os))
         return;
 
