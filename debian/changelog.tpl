@@ -1,8 +1,10 @@
-fastfetch (2.55.1~#UBUNTU_CODENAME#) #UBUNTU_CODENAME#; urgency=medium
+fastfetch (2.55.1~guideos1) unstable; urgency=medium
 
   * Update to 2.55.1
+  * Update GuideOS ASCII logo
+  * Add GuideOS Branding
 
- -- Carter Li <zhangsongcui@live.cn>  Mon, 17 Nov 2025 10:15:44 +0800
+ -- Actionschnitzel <actionschnitzel@guideos.de>  Sun, 24 Nov 2025 17:23:47 +0100
 
 fastfetch (2.55.0~#UBUNTU_CODENAME#) #UBUNTU_CODENAME#; urgency=medium
 
